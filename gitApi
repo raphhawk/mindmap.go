@@ -1,0 +1,23 @@
+  sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \\n       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  curl --request GET \\n--url "https://api.github.com/octocat"
+  curl --request GET \\n--url "https://api.github.com/raphhawk"
+  curl --request GET \\n--url "https://api.github.com/raphhawk/tentacles/readme.md"
+  curl --request GET \\n--url "https://github.com/raphhawk/tentacles/readme.md"
+  curl \\n  -H "Accept: application/vnd.github+json" \\n  -H "Authorization: Bearer <YOUR-TOKEN>"\\n  -H "X-GitHub-Api-Version: 2022-11-28" \\n  https://api.github.com/repos/raphhawk/tentacles/main
+  curl --request GET \\n--url "https://api.github.com/users/raphhawk"
+  curl --request GET \\n--url "https://api.github.com/users/raphhawk/repos"
+  curl --request GET \\n--url "https://api.github.com/repos/raphhawk/Tentacles"
+  curl --request GET \\n--url "git://github.com/raphhawk/Tentacles.git"
+  curl --request GET \\n--url "https://api.github.com/repos/raphhawk/Tentacles/contents"
+  curl --request GET \\n--url "https://api.github.com/repos/raphhawk/Tentacles/contents/go.work"
+  curl --request GET \\n--url "https://github.com/raphhawk/Tentacles/blob/main/go.work"
+  curl --request GET \\n--url "https://api.github.com/repos/raphhawk/Tentacles/contents/go.work"
+  curl --request GET \\n--url "https://api.github.com/repos/raphhawk/Tentacles/contents"
+  curl --request GET \\n--url "https://api.github.com/repos/raphhawk/Tentacles/contents/go.work"
+  curl --request GET \\n--url "https://raw.githubusercontent.com/raphhawk/Tentacles/main/go.work"
+  curl --request GET \\n--url "https://raw.githubusercontent.com/raphhawk/Tentacles/main/""
+  curl --request GET \\n--url "https://raw.githubusercontent.com/raphhawk/Tentacles/main/"
+  curl --request GET \\n--url "https://raw.githubusercontent.com/raphhawk/Tentacles/main"
+  curl --request GET \\n--url "https://raw.githubusercontent.com/raphhawk/Tentacles"
+  curl --request GET \\n--url "https://raw.githubusercontent.com/raphhawk/Tentacles/main/broker-service/cmd/api/main.go"
+  history|grep curl
