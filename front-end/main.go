@@ -8,7 +8,7 @@ import (
 )
 
 func render(w http.ResponseWriter) {
-	tmpl, err := template.ParseFiles("../front-end/views/app.layout.gohtml", "../front-end/views/styles/main.css.gohtml")
+	tmpl, err := template.ParseFiles("../front-end/views/app.layout.gohtml", "../front-end/views/styles/main.css.gohtml", "../front-end/views/scripts/app.js.gohtml")
 	if err != nil {
 		http.Error(w, err.Error(), http.StatusInternalServerError)
 	}

@@ -8,22 +8,30 @@
   </style>
 </head>
 <body>
+    <div class="topic">
+      <h1>mindmap.go</h1>
+    </div>
   <div>
     <div class="form-div">
-      <h1>mindmap.go</h1>
-      <form action="/fetch">
+      <form>
         <label for="user">username:</label><br>
         <input type="text" id="user" name="user" value="username"><br>
         <label for="repo">repository:</label><br>
         <input type="text" id="repo" name="repo" value="repo"><br>
+        <label for="branch">branch:</label><br>
+        <input type="text" id="branch" name="branch" value="main"><br>
         <label for="file">file:</label><br>
         <input type="text" id="file" name="file" value="file"><br><br>
-        <input class="btn" type="submit" value="Submit" >
+        <!--<button class="btn" id="btn" href="javascript:void(0);" type="submit" value="submit">Submit</button>-->
+        <a class="btn" id="btn" onclick="fetchLink()" href="javascript:void(0);" type="submit" value="submit">Submit</a>
       </form>
     </div>
-    <div>
-      <pre class="pretext"><span>source comes here...</span></pre>
+    <div id="output" class="output">
+      <span>source comes here...</span>
     </div>
   </div>
+  <script>
+    {{ template "scripts" .}}
+  </script>
 </body>
 </html>
