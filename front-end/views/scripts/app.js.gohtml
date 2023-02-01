@@ -1,20 +1,19 @@
 {{define "scripts"}}
-  let subBtn = document.getElementById("btn");
   let output = document.getElementById("output");
   const fetchLink = ()=>{
-    //"https://raw.githubusercontent.com/raphhawk/Tentacles/main/broker-service/cmd/api/main.go"
     let user = document.getElementById("user").value;
     let repo = document.getElementById("repo").value;
+    let branch = document.getElementById("branch").value;
     let file = document.getElementById("file").value;
-    output.innerHTML += `<br><strong>Response Recorded</strong>: https://raw.githubusercontent.com/${user}/${repo}/main/${file}`;
+    let url = `https:\/\/raw.githubusercontent.com/${user}/${repo}/${branch}/${file}`;
+    var storedText;
+    fetch(url)
+      .then(resp => {
+        resp.text().then(text => {
+          storedText=text
+          console.log(storedText);
+          output.innerHTML += `<br><strong>Response Recorded</strong>: ${url} <br> ${storedText}`;
+        });
+      });
   };
- // subBtn.addEventListener("click", function(){
- //  // let formElement = document.querySelector("form");
- //  // let fd = new FormData(formElement).searializeArray();
- //  // console.log(fd)
- //   let user = document.getElementById("user").value;
- //   let repo = document.getElementById("repo").value;
- //   let file = document.getElementById("file").value;
- //   output.innerHTML += `<br><strong>Response Recorded</strong>: ${user}/${repo}/${file}`
- // })
 {{end}}
